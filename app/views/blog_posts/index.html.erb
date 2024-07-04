@@ -2,7 +2,7 @@
 
 <% @blog_posts.each do |blog_post| %>
 <div  class: "text-blue-500 hover:underline">
-<h2 class="text-xl font-semibold"><%= link_to blog_post.title, blog_post,  class: "text-red-500 hover:underline" %></h2>
+<h2 class="text-xl font-semibold"><%= link_to blog_post.title, blog_post%></h2>
 <%= blog_post.body %>
 </div>
 <% end %>

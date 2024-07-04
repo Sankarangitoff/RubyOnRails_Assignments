@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   # get "/blog_posts/:id/edit", to: "blog_posts#edit", as: :edit_blog_post
   # post "/blog_posts", to: "blog_posts#create", as: :blog_posts
   #  we can ignore typing all the above request and can simply use one line code for all actions
-  devise_for :users
+
   resources :blog_posts
-  root "blog_posts#index"
+  root "blog_posts#home"
+  get "about", to: "blog_posts#about"
 end

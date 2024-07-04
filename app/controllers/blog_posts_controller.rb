@@ -1,5 +1,5 @@
 class BlogPostsController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :edit, :destroy, :update]
+#   before_action :authenticate_user!, only: [:create, :edit, :destroy, :update]
 
     # before_action :set_blog_post, expect: [:index, :new, :create]
         # #           we can also write as only: [:show, :edit, :destroy, :update]
@@ -42,7 +42,7 @@ class BlogPostsController < ApplicationController
      def destroy
                 @blog_post = BlogPost.find(params[:id])
                 @blog_post.destroy
-                redirect_to root_path
+                redirect_to blog_posts_path
     end
 
     private

@@ -1,3 +1,12 @@
 <h1>Edit Blog</h1>
 <%= render partial: "form", locals: {blog_post: @blog_post} %>
-<%= button_to "Delete", @blog_post, method: :delete, data: {turbo_confirm: "Are you surely want to delete?"} %>
+<div class= "container-fluid">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<br>
+  <li class="nav-item">
+    <%= link_to 'Back', blog_post_path(@blog_post),class: "btn btn-secondary"%>
+    </li><br>
+  <li class="nav-item">
+    <%= link_to 'Delete this article', blog_post_path(@blog_post), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+  </li></ul>
+</div>
